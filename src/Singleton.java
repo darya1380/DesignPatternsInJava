@@ -1,23 +1,26 @@
 public class Singleton
 {
-    private static Singleton instance;
-    private Singleton()
-    {
-
-    }
-    public static Singleton getInstance()
-    {
-        if(instance == null)
-        {
-            instance = new Singleton();
-        }
-        return instance;
-    }
-
-}
-class TestSingleton
-{
     public static void main(String[] args) {
+        MainServer server = MainServer.getInstance(1212, "localhost");
+    }
+}
+class MainServer
+{
+    private int port;
+    private String ip;
+    private static MainServer mainServer;
 
+    private MainServer(int port, String ip) {
+        this.port = port;
+        this.ip = ip;
+    }
+
+    public static MainServer getInstance(int port, String ip)
+    {
+        if(mainServer == null)
+        {
+            mainServer = new MainServer(port, ip);
+        }
+        return mainServer;
     }
 }
