@@ -10,6 +10,8 @@ public class AbstractFactory
          * i think it is used for when our constructors are not the same
          */
         AbstractCake cake1 = CakeFactory.getCake(new CupCakeFactory("cup cake"));
+        System.out.println(cake);
+        System.out.println(cake1);
     }
 }
 abstract class AbstractCake
