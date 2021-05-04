@@ -1,9 +1,10 @@
-package factory;
+package creational.factory;
 
 public class Factory
 {
     public static void main(String[] args) {
         Music m = MusicFactory.getMusic("traditional", new Rhythm("slow", 1), "somebody");
+
 
     }
 }

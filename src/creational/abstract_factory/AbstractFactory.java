@@ -1,6 +1,4 @@
-package abstract_factory;
-
-import org.omg.CORBA.CurrentOperations;
+package creational.abstract_factory;
 
 public class AbstractFactory
 {
